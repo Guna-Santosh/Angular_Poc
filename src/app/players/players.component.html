@@ -1,0 +1,30 @@
+<!-- players.component.html -->
+<div class="players-container">
+  <form class="text-center">
+    <div class="mb-3">
+      <label for="player1">Player 1:</label>
+      <input
+        id="player1"
+        [(ngModel)]="player1Name"
+        name="player1"
+        (ngModelChange)="onPlayer1NameChange()"
+        placeholder="Enter Player 1's name"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="player2">Player 2:</label>
+      <input
+        id="player2"
+        [(ngModel)]="player2Name"
+        name="player2"
+        (ngModelChange)="onPlayer2NameChange()"
+        placeholder="Enter Player 2's name"
+      />
+    </div>
+
+    <button type="button" (click)="saveNames()" class="btn btn-primary">Save Names</button>
+    <button type="button" (click)="swapNames()" class="btn btn-secondary">Swap</button>
+    <button type="button" (click)="cleanNames()" class="btn btn-danger">Clean</button>
+  </form>
+</div>

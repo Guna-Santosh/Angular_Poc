@@ -1,0 +1,22 @@
+/* app.component.css */
+
+.player-names-container,
+.tic-tac-toe-container,
+.winner-names-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.player-names-container {
+  background-color: #f8d7da; /* Red background for player names */
+}
+
+/* .tic-tac-toe-container {
+  Green background for the Tic Tac Toe board 
+} */
+
+.winner-names-container {
+  background-color: #cce5ff; /* Blue background for winner names */
+}
+
+/* Add more styles as needed */

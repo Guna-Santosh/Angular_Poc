@@ -1,0 +1,27 @@
+<!-- app.component.html -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- 1st Grid: Player Names -->
+    <div class="">
+      <div class="player-names-container p-3 shadow">
+        <app-players [(player1Name)]="player1" [(player2Name)]="player2" (namesCleared)="clearNames()"></app-players>
+      </div>
+    </div>
+
+    <!-- 2nd Grid: Tic Tac Toe Game Board -->
+    <div class="col-mb-4 p-4">
+      <div class="tic-tac-toe-container p-3 shadow">
+        <app-game-board [player1]="player1" [player2]="player2" (namesCleared)="clearNames()" (gameBoardReady)="onGameBoardReady($event)"></app-game-board>
+      </div>
+    </div>
+
+    <!-- 3rd Grid: Winner Names -->
+    <div class="mb-4">
+        <div class="winner-names-container p-3 shadow">
+        <p class="text-center">{{ player1 }} Wins: {{ player1WinCount }} {{ player2 }} Wins: {{ player2WinCount }} <br> Draws: {{ drawCount }}</p>
+        <!-- <p class="text-center">{{ player2 }} Wins: {{ player2WinCount }}</p>
+        <p class="text-center">Draws: {{ drawCount }}</p> -->
+      </div>
+    </div>
+  </div>
+</div>

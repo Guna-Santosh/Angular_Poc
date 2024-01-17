@@ -1,0 +1,13 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adjust the height as needed */
+    padding-top: 40%;
+  }
+  
+  .center-content {
+    text-align: center;
+    /* Add additional styling for your content */
+  }
+  

@@ -1,0 +1,13 @@
+<!-- GameOverComponent.html -->
+
+<div class="center-container">
+    <div class="center-content">
+      <div *ngIf="winner || draw">
+        <h2>Game Over!</h2>
+        <p *ngIf="winner">{{ winner }} wins!</p>
+        <p *ngIf="draw">It's a draw!</p>
+        <button (click)="restartGame()">Restart Game</button>
+      </div>
+    </div>
+  </div>
+  

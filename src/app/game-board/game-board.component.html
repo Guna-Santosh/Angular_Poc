@@ -1,0 +1,25 @@
+<!-- app-game-board.component.html -->
+
+<div class="board-container">
+  <div class="row">
+    <div class="col-md-3">
+      <app-player-winner-count
+        [player1]="player1"
+        [player2]="player2"
+        [player1WinCount]="player1WinCount"
+        [player2WinCount]="player2WinCount"
+        [drawCount]="drawCount"
+        
+      ></app-player-winner-count>
+    </div>
+  <div class="col-md-3 " *ngFor="let row of moves; let rowIndex = index">
+    <div class="col-4 cell" *ngFor="let cell of row; let colIndex = index" (click)="makeMove(rowIndex, colIndex)">
+      {{ cell.symbol }}
+      <div class="player-name" *ngIf="cell.playerName">{{ cell.playerName }}</div>
+    </div>
+  </div> 
+  </div>
+  <div class="col-md-3 float-right gp">
+    <app-game-over [winner]="winner" [draw]="draw" (restartGameEvent)="restartGame()"></app-game-over>
+  </div>
+</div>
